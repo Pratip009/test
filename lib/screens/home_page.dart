@@ -3,6 +3,7 @@ import 'package:test_1/screens/contact_page.dart';
 import 'package:test_1/screens/profile_page.dart';
 import 'package:test_1/screens/share_page.dart';
 import 'package:test_1/screens/wallet_page.dart';
+import 'package:test_1/utils/dimensions.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,16 +30,16 @@ class _HomePageState extends State<HomePage> {
           child: currenScreen,
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Color(0xFF0158BE),
+          backgroundColor: const Color(0xFF0158BE),
           onPressed: () {},
           child: const Icon(Icons.add),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
-          notchMargin: 7,
+          notchMargin: Dimensions.height7,
           child: SizedBox(
-            height: 72,
+            height: Dimensions.height72,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: Dimensions.width40,
                       onPressed: () {
                         setState(() {
                           currenScreen = ProfilePage();
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: Dimensions.width40,
                       onPressed: () {
                         setState(() {
                           currenScreen = const ContactPage();
@@ -107,10 +108,10 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: Dimensions.width40,
                       onPressed: () {
                         setState(() {
-                          currenScreen = SharePage();
+                          currenScreen = const SharePage();
                           currentTab = 2;
                         });
                       },
@@ -135,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     MaterialButton(
-                      minWidth: 40,
+                      minWidth: Dimensions.width40,
                       onPressed: () {
                         setState(() {
                           currenScreen = const WalletPage();

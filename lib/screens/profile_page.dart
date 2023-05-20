@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 85,
+              height: Dimensions.height85,
               width: double.maxFinite,
               decoration: const BoxDecoration(
                 color: Colors.black,
@@ -39,19 +39,19 @@ class ProfilePage extends StatelessWidget {
                 top: true,
                 right: true,
                 bottom: true,
-                minimum: const EdgeInsets.all(21.0),
+                minimum: EdgeInsets.all(Dimensions.height21),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset(
                       'assets/images/test.png',
-                      height: 45,
-                      width: 45,
+                      height: Dimensions.height45,
+                      width: Dimensions.width45,
                     ),
-                    const Icon(
+                    Icon(
                       Icons.notifications_none,
                       color: Colors.white,
-                      size: 26,
+                      size: Dimensions.height26,
                     )
                   ],
                 ),
@@ -61,58 +61,58 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 21),
               child: Column(
                 children: [
-                  const Align(
+                  Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Hello Dipak 👋',
                       style: TextStyle(
                         fontFamily: 'Acumin Pro',
-                        fontSize: 25,
+                        fontSize: Dimensions.height24,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
+                  SizedBox(
+                    height: Dimensions.height14,
                   ),
                   Image.asset(
                     'assets/images/1.png',
                     width: double.infinity,
-                    height: 66,
+                    height: Dimensions.height66,
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: Dimensions.height20,
                   ),
                   // ignore: avoid_unnecessary_containers
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
+                      borderRadius: BorderRadius.circular(Dimensions.height16),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(Dimensions.height7),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(
                             'assets/images/3.png',
-                            width: 342,
-                            height: 142,
+                            width: Dimensions.width342,
+                            height: Dimensions.height142,
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: Dimensions.height20 / 2,
                           ),
-                          const Text(
+                          Text(
                             'Play Ludo and Earn Money',
                             style: TextStyle(
                               fontFamily: 'Acumin Pro',
-                              fontSize: 20,
+                              fontSize: Dimensions.height20,
                               color: Colors.black,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: Dimensions.height20 / 2,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,24 +132,24 @@ class ProfilePage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                  const SizedBox(
-                                    width: 10,
+                                  SizedBox(
+                                    width: Dimensions.height20 / 2,
                                   ),
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: const [
+                                    children: [
                                       Text(
                                         '5,00,000+',
                                         style: TextStyle(
-                                          fontSize: 16,
+                                          fontSize: Dimensions.height16,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                       Text(
                                         'Players',
                                         style: TextStyle(
-                                          fontSize: 13,
+                                          fontSize: Dimensions.height13,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       )
@@ -185,23 +185,23 @@ class ProfilePage extends StatelessWidget {
                         children: [
                           Image.asset(
                             'assets/images/2.png',
-                            width: 342,
-                            height: 142,
+                            width: Dimensions.width342,
+                            height: Dimensions.height142,
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: Dimensions.height20 / 2,
                           ),
-                          const Text(
+                          Text(
                             'Play Cricket Fantasy League',
                             style: TextStyle(
                               fontFamily: 'Acumin Pro',
-                              fontSize: 20,
+                              fontSize: Dimensions.height20,
                               color: Colors.black,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: Dimensions.height20 / 2,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -221,24 +221,24 @@ class ProfilePage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                  const SizedBox(
-                                    width: 10,
+                                  SizedBox(
+                                    width: Dimensions.width40 / 4,
                                   ),
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: const [
+                                    children: [
                                       Text(
                                         '5,00,000+',
                                         style: TextStyle(
-                                          fontSize: 16,
+                                          fontSize: Dimensions.height16,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                       Text(
                                         'Players',
                                         style: TextStyle(
-                                          fontSize: 13,
+                                          fontSize: Dimensions.height13,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       )
