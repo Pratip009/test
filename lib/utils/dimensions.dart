@@ -26,6 +26,7 @@ class Dimensions {
 //constant width
   static double width5 = screenWidth / 78.54545454545455;
   static double width40 = screenWidth / 9.81818181818181875;
+    static double width60 = screenWidth / 6.5454545454545458333333333333333;
   static double width45 = screenWidth / 8.7272727272727277777777777777778;
   static double width80 = screenWidth / 4.909090909090909375;
   static double width134 = screenWidth / 2.930800542740841417910447761194;

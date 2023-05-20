@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_1/screens/contact_page.dart';
 import 'package:test_1/screens/profile_page.dart';
@@ -30,9 +31,25 @@ class _HomePageState extends State<HomePage> {
           child: currenScreen,
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color(0xFF0158BE),
+          child: Container(
+            width: Dimensions.width60,
+            height: Dimensions.height30 * 2,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0xFF0054BE),
+                    Color(0XFF0A7AC3),
+                  ],
+                )),
+            child: Icon(
+              Icons.add,
+              size: Dimensions.height20 * 2,
+            ),
+          ),
           onPressed: () {},
-          child: const Icon(Icons.add),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
@@ -58,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            Icons.person_2_rounded,
+                            CupertinoIcons.person_alt,
                             color: currentTab == 0
                                 ? const Color(0xFF0158BE)
                                 : const Color(0xFFCCCCCC),
@@ -66,6 +83,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Profile',
                             style: TextStyle(
+                              fontWeight: FontWeight.normal,
                               color: currentTab == 0
                                   ? const Color(0xFF0158BE)
                                   : const Color(0xFFCCCCCC),
@@ -94,6 +112,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Contact',
                             style: TextStyle(
+                              fontWeight: FontWeight.normal,
                               color: currentTab == 1
                                   ? const Color(0xFF0158BE)
                                   : const Color(0xFFCCCCCC),
@@ -127,6 +146,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Share',
                             style: TextStyle(
+                              fontWeight: FontWeight.normal,
                               color: currentTab == 2
                                   ? const Color(0xFF0158BE)
                                   : const Color(0xFFCCCCCC),
@@ -155,6 +175,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Wallet',
                             style: TextStyle(
+                              fontWeight: FontWeight.normal,
                               color: currentTab == 3
                                   ? const Color(0xFF0158BE)
                                   : const Color(0xFFCCCCCC),

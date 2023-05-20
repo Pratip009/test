@@ -1,11 +1,13 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:test_1/utils/dimensions.dart';
 
 import '../widgets/custom_button.dart';
 
 class ProfilePage extends StatelessWidget {
+  //! Random images from network to create avatar stack
   List RandomImages = [
     'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8fHww&w=1000&q=80',
     'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg',
@@ -40,6 +42,7 @@ class ProfilePage extends StatelessWidget {
                 right: true,
                 bottom: true,
                 minimum: EdgeInsets.all(Dimensions.height21),
+                //! Safearea
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -49,7 +52,7 @@ class ProfilePage extends StatelessWidget {
                       width: Dimensions.width45,
                     ),
                     Icon(
-                      Icons.notifications_none,
+                      CupertinoIcons.bell,
                       color: Colors.white,
                       size: Dimensions.height26,
                     )

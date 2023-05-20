@@ -1,7 +1,8 @@
 // ignore_for_file: file_names
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:test_1/screens/profile_page.dart';
+import 'package:test_1/screens/home_page.dart';
 
 import 'package:test_1/utils/dimensions.dart';
 
@@ -24,6 +25,7 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              //! logo in login page
               Container(
                 height: Dimensions.height80,
                 width: Dimensions.width80,
@@ -60,6 +62,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     SizedBox(
                       width: Dimensions.width350,
+                      //! mobile number text field
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
@@ -68,7 +71,7 @@ class LoginPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             prefixIcon: Icon(
-                              Icons.phone,
+                              CupertinoIcons.phone,
                               size: Dimensions.height20,
                             ),
                             filled: true,
@@ -86,6 +89,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     SizedBox(
                       width: Dimensions.width350,
+                      //!password form field
                       child: TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
@@ -94,7 +98,7 @@ class LoginPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             prefixIcon: Icon(
-                              Icons.lock_outline,
+                              CupertinoIcons.lock_fill,
                               size: Dimensions.height20,
                             ),
                             filled: true,
@@ -127,22 +131,23 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       height: Dimensions.height16,
                     ),
-                    InkWell(
-                        onTap: () {
-                          Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(builder: (_) => ProfilePage()),
-                              (route) => false);
-                        },
-                        child: CustomButton(
-                          text: 'Login',
-                          onPressed: () {},
-                          width: Dimensions.width350,
-                          height: Dimensions.height50,
-                        )),
+                    //!Login Button
+                    CustomButton(
+                      text: 'Login',
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true)
+                            .pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                    builder: (context) => const HomePage()),
+                                (route) => false);
+                      },
+                      width: Dimensions.width350,
+                      height: Dimensions.height50,
+                    ),
                     SizedBox(
                       height: Dimensions.height30,
                     ),
+                    //! Login with OTP Button
                     Container(
                       width: Dimensions.width350,
                       height: Dimensions.height50,
